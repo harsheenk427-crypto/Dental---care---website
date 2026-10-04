@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>DentalCare - Appointments</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header class="topbar">
+
+    <h2>🦷 DentalCare</h2>
+
+    <button onclick="logout()" class="logout-btn">
+        Logout
+    </button>
+
+</header>
+
+<div class="layout">
+
+    <aside class="sidebar">
+
+        <a href="dashboard.html">📊 Dashboard</a>
+
+        <a href="patients.html">👥 Patients</a>
+
+        <a href="appointments.html" class="active">
+            📅 Appointments
+        </a>
+
+        <a href="treatments.html">🦷 Treatments</a>
+
+    </aside>
+
+    <main class="content">
+
+        <div class="page-header">
+
+            <div>
+                <h1>Appointments</h1>
+
+                <p class="subtitle">
+                    Schedule and manage appointments
+                </p>
+            </div>
+
+            <button
+                onclick="openAppointmentForm()"
+                class="primary-btn"
+            >
+                + New Appointment
+            </button>
+
+        </div>
+
+        <div id="appointmentForm" class="form-card hidden">
+
+            <h2>Book Appointment</h2>
+
+            <input
+                type="text"
+                id="appointmentPatient"
+                placeholder="Patient Name"
+            >
+
+            <input
+                type="text"
+                id="dentist"
+                placeholder="Dentist Name"
+            >
+
+            <input
+                type="date"
+                id="appointmentDate"
+            >
+
+            <input
+                type="time"
+                id="appointmentTime"
+            >
+
+            <select id="appointmentStatus">
+
+                <option>Scheduled</option>
+
+                <option>Completed</option>
+
+                <option>Cancelled</option>
+
+            </select>
+
+            <textarea
+                id="appointmentReason"
+                placeholder="Reason for visit"
+            ></textarea>
+
+            <button
+                onclick="addAppointment()"
+                class="primary-btn"
+            >
+                Save Appointment
+            </button>
+
+            <button
+                onclick="closeAppointmentForm()"
+                class="cancel-btn"
+            >
+                Cancel
+            </button>
+
+        </div>
+
+        <div id="appointmentList"></div>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

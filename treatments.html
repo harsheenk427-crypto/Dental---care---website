@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>DentalCare - Treatments</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header class="topbar">
+
+    <h2>🦷 DentalCare</h2>
+
+    <button onclick="logout()" class="logout-btn">
+        Logout
+    </button>
+
+</header>
+
+<div class="layout">
+
+    <aside class="sidebar">
+
+        <a href="dashboard.html">📊 Dashboard</a>
+
+        <a href="patients.html">👥 Patients</a>
+
+        <a href="appointments.html">📅 Appointments</a>
+
+        <a href="treatments.html" class="active">
+            🦷 Treatments
+        </a>
+
+    </aside>
+
+    <main class="content">
+
+        <div class="page-header">
+
+            <div>
+
+                <h1>Treatment & Progress</h1>
+
+                <p class="subtitle">
+                    Track patient treatment progress
+                </p>
+
+            </div>
+
+            <button
+                onclick="openTreatmentForm()"
+                class="primary-btn"
+            >
+                + Add Treatment
+            </button>
+
+        </div>
+
+        <div id="treatmentForm" class="form-card hidden">
+
+            <h2>Add Treatment</h2>
+
+            <input
+                type="text"
+                id="treatmentPatient"
+                placeholder="Patient Name"
+            >
+
+            <input
+                type="text"
+                id="treatmentName"
+                placeholder="Treatment Name"
+            >
+
+            <select id="treatmentStatus">
+
+                <option>In Progress</option>
+
+                <option>Completed</option>
+
+                <option>Pending</option>
+
+            </select>
+
+            <input
+                type="date"
+                id="treatmentDate"
+            >
+
+            <textarea
+                id="treatmentNotes"
+                placeholder="Treatment notes"
+            ></textarea>
+
+            <button
+                onclick="addTreatment()"
+                class="primary-btn"
+            >
+                Save Treatment
+            </button>
+
+            <button
+                onclick="closeTreatmentForm()"
+                class="cancel-btn"
+            >
+                Cancel
+            </button>
+
+        </div>
+
+        <div id="treatmentList" class="treatment-grid"></div>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

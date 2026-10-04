@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DentalCare - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="topbar">
+
+    <div>
+        <h2>🦷 DentalCare</h2>
+    </div>
+
+    <button onclick="logout()" class="logout-btn">
+        Logout
+    </button>
+
+</header>
+
+<div class="layout">
+
+    <aside class="sidebar">
+
+        <a href="dashboard.html" class="active">📊 Dashboard</a>
+
+        <a href="patients.html">👥 Patients</a>
+
+        <a href="appointments.html">📅 Appointments</a>
+
+        <a href="treatments.html">🦷 Treatments</a>
+
+    </aside>
+
+    <main class="content">
+
+        <h1>Dashboard</h1>
+        <p class="subtitle">Welcome to Dental Practice Management System</p>
+
+        <div class="dashboard-cards">
+
+            <div class="stat-card">
+                <div class="stat-icon">👥</div>
+                <div>
+                    <h2 id="patientCount">0</h2>
+                    <p>Total Patients</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">📅</div>
+                <div>
+                    <h2 id="appointmentCount">0</h2>
+                    <p>Appointments</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">🦷</div>
+                <div>
+                    <h2 id="treatmentCount">0</h2>
+                    <p>Active Treatments</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">✅</div>
+                <div>
+                    <h2 id="completedCount">0</h2>
+                    <p>Completed</p>
+                </div>
+            </div>
+
+        </div>
+
+        <section class="dashboard-section">
+
+            <div class="section-header">
+                <h2>Quick Actions</h2>
+            </div>
+
+            <div class="quick-actions">
+
+                <a href="patients.html" class="action-card">
+                    <span>➕</span>
+                    <h3>Add Patient</h3>
+                    <p>Register a new patient</p>
+                </a>
+
+                <a href="appointments.html" class="action-card">
+                    <span>📅</span>
+                    <h3>Book Appointment</h3>
+                    <p>Schedule an appointment</p>
+                </a>
+
+                <a href="treatments.html" class="action-card">
+                    <span>🦷</span>
+                    <h3>Add Treatment</h3>
+                    <p>Record treatment progress</p>
+                </a>
+
+            </div>
+
+        </section>
+
+        <section class="dashboard-section">
+
+            <h2>System Features</h2>
+
+            <div class="feature-grid">
+
+                <div>
+                    <h3>👥 Patient Records</h3>
+                    <p>Manage patient information and medical history.</p>
+                </div>
+
+                <div>
+                    <h3>📅 Appointment Scheduling</h3>
+                    <p>Schedule and track dental appointments.</p>
+                </div>
+
+                <div>
+                    <h3>🦷 Treatment Tracking</h3>
+                    <p>Monitor treatment progress and status.</p>
+                </div>
+
+                <div>
+                    <h3>🔎 Easy Search</h3>
+                    <p>Quickly find patient records.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DentalCare - Patients</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="topbar">
+
+    <h2>🦷 DentalCare</h2>
+
+    <button onclick="logout()" class="logout-btn">
+        Logout
+    </button>
+
+</header>
+
+<div class="layout">
+
+    <aside class="sidebar">
+
+        <a href="dashboard.html">📊 Dashboard</a>
+
+        <a href="patients.html" class="active">👥 Patients</a>
+
+        <a href="appointments.html">📅 Appointments</a>
+
+        <a href="treatments.html">🦷 Treatments</a>
+
+    </aside>
+
+    <main class="content">
+
+        <div class="page-header">
+
+            <div>
+                <h1>Patients</h1>
+                <p class="subtitle">Manage patient records</p>
+            </div>
+
+            <button onclick="openPatientForm()" class="primary-btn">
+                + Add Patient
+            </button>
+
+        </div>
+
+        <input
+            type="text"
+            id="patientSearch"
+            class="search-box"
+            placeholder="🔍 Search patient..."
+            onkeyup="displayPatients()"
+        >
+
+        <div id="patientForm" class="form-card hidden">
+
+            <h2>Add New Patient</h2>
+
+            <input type="text" id="patientName" placeholder="Full Name">
+
+            <input type="number" id="patientAge" placeholder="Age">
+
+            <input type="text" id="patientPhone" placeholder="Phone Number">
+
+            <input type="email" id="patientEmail" placeholder="Email">
+
+            <select id="patientGender">
+
+                <option value="">Select Gender</option>
+
+                <option>Male</option>
+
+                <option>Female</option>
+
+                <option>Other</option>
+
+            </select>
+
+            <textarea
+                id="patientHistory"
+                placeholder="Dental / Medical History"
+            ></textarea>
+
+            <button onclick="addPatient()" class="primary-btn">
+                Save Patient
+            </button>
+
+            <button onclick="closePatientForm()" class="cancel-btn">
+                Cancel
+            </button>
+
+        </div>
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Phone</th>
+                    <th>Gender</th>
+                    <th>Action</th>
+                </tr>
+
+                </thead>
+
+                <tbody id="patientTable"></tbody>
+
+            </table>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

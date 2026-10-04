@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DentalCare - Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="login-body">
+
+<div class="login-container">
+
+    <div class="login-logo">
+        🦷
+    </div>
+
+    <h1>DentalCare</h1>
+    <p>Dental Practice Management System</p>
+
+    <form onsubmit="login(event)">
+
+        <label>Username</label>
+        <input type="text" id="username" placeholder="Enter username" required>
+
+        <label>Password</label>
+        <input type="password" id="password" placeholder="Enter password" required>
+
+        <button type="submit" class="primary-btn">Login</button>
+
+    </form>
+
+    <p class="demo-text">
+        Demo login: admin / 1234
+    </p>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
